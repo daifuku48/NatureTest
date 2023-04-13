@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TestActivity">
+
+    <TextView
+        android:id = "@+id/questionTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="180dp"
+        android:text = "question"
+        android:fontFamily="@font/robotomono_medium"
+        android:textSize="30sp"
+        android:textColor="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"/>
+    <LinearLayout
+        android:id = "@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/questionTextView"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id = "@+id/firstRadioButton"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionTextView"
+            app:layout_constraintEnd_toStartOf="@id/firstAnswerTextView"
+            android:layout_marginStart="100dp"/>
+
+        <TextView
+            android:id = "@+id/firstAnswerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "text"
+            android:fontFamily="@font/robotomono_medium"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/green_2"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@id/questionTextView"
+            app:layout_constraintStart_toEndOf="@id/firstRadioButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="40dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id = "@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear">
+            <RadioButton
+                android:id = "@+id/secondRadioButton"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstAnswerTextView"
+                app:layout_constraintEnd_toStartOf="@id/secondAnswerTextView"
+                android:layout_marginStart="100dp"/>
+
+            <TextView
+                android:id = "@+id/secondAnswerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomono_medium"
+                android:textColor="@color/green_2"
+                android:text = "text"
+                android:layout_marginTop="35dp"
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@id/firstAnswerTextView"
+                app:layout_constraintStart_toEndOf="@id/secondRadioButton"
+                android:layout_marginEnd="40dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAnswer"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/robotomono_medium"
+        android:text="Answer"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
